@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="icon bookmark shortcut" type="image/png" href="/favicon.ico">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="/css/custom.css" rel="stylesheet" type="text/css">
+  <title> Ticwear UI Design </title>
+</head>
+
+<body class="bg-">
+
+  
+<header class="px-5 bg-primary navbar flex-column flex-md-row bd-navbar">
+
+<a class="navbar-brand my-3 my-md-0 ml-md-4" href="/"><img class="d-block"  src="/img/logo.png" alt=""></a>
+<div class="navbar-nav flex-row pr-md-3">
+  
+    <a class="mx-4 ml-md-5 mr-md-3 nav-link " href="/" >
+      PROJECTS
+    </a>
+  
+    <a class="mx-4 ml-md-5 mr-md-3 nav-link " href="/shots/" >
+      SHOTS
+    </a>
+  
+    <a class="mx-4 ml-md-5 mr-md-3 nav-link " href="/about/" >
+      ABOUT
+    </a>
+  
+</div>
+</header>
+
+
+  <div class="container-fluid" >
+    <div class="row">
+        <!-- content -->
+        <div class="col-lg"></div>
+<div class="col-12 col-lg-9 col-xl-7 col-xxxl-6 py-5 px-5" >
+  <div class="mb-5 article">
+      <h1 class="mb-4">Ticwear UI Design</h1>
+      <h6 class="mb-4">2015 - 2017 @ Mobvoi</h6>
+      <p><img class="img-fluid my-4" src="/img/article/watch-ui/watch-ui-1.png" /></p>
+
+<blockquote>
+  <p>Ticwatch 是由出门问问研发的一款智能手表。搭载出门问问自主研发的语音和智能服务，内置自主研发的应用和精美的表盘。用户也可以从应用商店和表盘商店获取更丰富的应用和表盘。前几代产品搭载自主研发的基于 Android 的 <strong>Ticwear</strong> 系统。最新一代的产品采用 Google 的 Wear OS 系统。</p>
+</blockquote>
+
+<blockquote>
+  <p>在2015年9月我加入了出门问问，并在接下来的一年时间里，负责 Ticwear 的用户体验设计。能够参与一个前沿科技产品的体验设计，至今我都觉得非常的开心和幸运。有机会看到自己的设计不断的出现在一款自己喜爱的硬件产品上，这种感觉非常美妙，特别是当自己设计的图标、界面出现在发布会的大屏幕上，对我这样一个从纯工科转行来做设计的人来说，实在是莫大的鼓励。感谢出门问问的每一个小伙伴。</p>
+</blockquote>
+
+<p>我在这里分享一些 Ticwear 最重要的一次版本更新——4.0 版本时我做过的一些设计方案、设计思路和对产品开发的理解。</p>
+
+<h4 id="从表盘开始">从表盘开始</h4>
+
+<p>智能手表的表盘界面是用户最常看到的界面，日常的体验大部分都从表盘开始。随着表盘设计的不断进步，表盘已经不仅仅用来看时间，还承载越来越丰富的信息和功能，逐渐变成智能手表最重要的界面。过去，一支传统手表只对应一个固定的表盘，而在智能手表上，人们能体验到无限多的表盘。</p>
+
+<p>Ticwear 4.0 版本之前的表盘设计，突出了创意和个性化的特点，整体比较简洁，也有一些很有趣的设计。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-old-watch-face.png" /></p>
+<center class="mb-4">Ticwear 3.0的内置表盘</center>
+
+<p>经过一段时间的经验积累，我总结了几个表盘设计的关键点：</p>
+
+<h5 id="在表盘上展示更多日常信息">在表盘上展示更多日常信息</h5>
+
+<p>如果有些原本很喜欢的表盘上，却没有我经常关注的信息，会很让人失望。所以我们在设计新表盘时，尽可能多的展示除时间日期之外的日常信息。我们认为星期、天气、温度，手表电量，步数是除了日期之外一定要在展示在表盘上的，其他例如：PM2.5，心率，手机电量，日程提醒，应用入口等的则可根据表盘的主题做选择的展示。</p>
+
+<p>遗憾的是，实际上，即便我们在设计表盘时尽可能多的融入了上面提到的信息，还是会有很多用户的需求无法覆盖到。虽然比以前稍有进步，但这依然不是一个科学的、聪明的方案。</p>
+
+<p>这里不得不提到 Apple Watch 表盘上的 Complication (复杂功能) 的设计。Apple watch 的表盘，大部分（也可能是全部）都可以用户自定义。自定义的价值，不在于视觉样式上的自定义，而是那些可以展示在表盘上的 Complication 自定义。这个是 Ticwear 没有去尝试的，也就意味着在 Ticwear 上，如果一个表盘在设计的时候，就没考虑天气的展示，那用户还是没机会在一个自己喜欢的表盘上一眼就看到天气。Apple Watch 也让常用的应用程序可以变成一个快捷的入口，从表盘就可以直接进入。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="https://developer.apple.com/library/archive/documentation/General/Conceptual/WatchKitProgrammingGuide/Art/complication_styles_2x.png" /></p>
+<center class="mb-4"> Apple Watch OS —— Complication (复杂功能) 图片来自 Apple 官网</center>
+
+<p>由 Complication，可以引出另一个产品设计问题：Apple watch 还提供很多其他跟时间相关的功能，比如：世界时间，日出日落，月相等。而 ticwatch 上没有这些信息和应用的提供。我觉得作为一个智能手表，是可以想办法尽可能满足用户更多的关于<strong>时间</strong>的需求的。</p>
+
+<h5 id="让表盘更精致">让表盘更精致</h5>
+
+<p>智能手表虽然有一块什么都能显示的屏幕，但手表仍然是个饰品，表盘和外观更多时候应该看上去是一个整体。4.0之前的表盘设计相对来说是独立于外观的。从4.0版本开始，表盘设计更多的考虑与外观的搭配，我们开始尝试并陆续设计出了更多拟物风格、传统风格的表盘，可以用来搭配不同的表体和表带。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-my-watch-face.png" /></p>
+<center class="mb-4"> 我设计的几款表盘 </center>
+
+<h5 id="功能化表盘抬刻表盘">功能化表盘：抬刻表盘</h5>
+
+<p>除了视觉上的丰富变化，表盘还可以在功能上更加丰富，例如，运动表盘，天气表盘，世界时间表盘等等。设计团队内部发起过一些产品创意项目，抬刻表盘是其中由我主导设计的一个最有可能实际开发的一个，也是一个功能化表盘。虽然后来没有正式立项开发，但我觉得还是值得分享的。</p>
+
+<ul>
+  <li><strong>抬刻</strong> 是 Tac 的汉字音译，也表示“抬腕时刻”。最初的想法是一个简单的单词表盘，每次抬起手腕都会看见一个不同的单词卡片。</li>
+  <li>经过几次讨论，扩展为可以订阅内容的短内容表盘，依然是每次看表都会看到不同的内容。实际的内容订阅功能会有些复杂，实际开发会从单词表盘做起。</li>
+  <li>我们在手机端设计了回看功能，可以让用户回看之前看过的所有短内容。</li>
+  <li>由于跟系统本身单指四方位交互冲突，关于这个表盘的操作都是双指的，需要首次教学引导。</li>
+</ul>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-tac.png" /></p>
+<center class="mb-4"> Tac 表盘PRD缩略图 </center>
+
+<h4 id="ticwear-的交互结构">Ticwear 的交互结构</h4>
+
+<p>Ticwear 系统整体的交互结构是从上下左右四个方向划出不同的功能页面，这一交互形式，从3.0延续到4.0版本。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-four-directions.png" /></p>
+<center class="mb-4"> Ticwear 交互结构 </center>
+
+<p>从整体设计上看，手表交互结构，跟手机很相似，但又有一些不同。</p>
+
+<p><strong>手机</strong>，从锁屏经历一个仪式感较重的解锁环节，进入主页——应用列表，核心体验是应用程序。没有应用程序，就没有智能手机。</p>
+
+<p><strong>手表</strong>，在表盘能看到时间日期以及一些常用信息。而手表应用程序都是轻交互，轻浏览，较低频使用的应用程序，整个智能手表的体验不再从“进入一个应用程序”开始。所以应用程序的列表也就不再是系统的”主屏”了。</p>
+
+<p>Ticwear 交互也体现了这样的不同，应用列表跟其他几个方位划出的功能是并列关系，并没有被特殊强调。</p>
+
+<p>Ticwatch 只有一个物理键：在表盘界面点击，熄灭屏幕；在其他界面在其他界面点击，退出当前应用；长按，进入关机设置界面。</p>
+
+<h5 id="redesign"><strong>Redesign</strong></h5>
+
+<p>任何一个方案都会有他的不足，Ticwear 的四个方向所代表的四个功能是完全平等的，没有轻重之分。四个方向的交互手势、动画的形式，与其所对应的功能没有任何关联，也没有视觉上的提示，用户需要完全的靠记忆去使用这些的功能，在还分不太清哪个方向对应哪个功能的时候，会产生一定的认知混乱。从这一点看，Ticwear 还是有优化空间的。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-redesign.png" /></p>
+<center class="mb-4"> Ticwear 交互结构 Redesign </center>
+
+<p>这个设计的关键点：</p>
+
+<ul>
+  <li>
+    <p>类似左划和右划这类最直接、最简单手势，跟当前的界面形成自然关联的交互形式会更易理解和上手，例如：手机上的应用列表翻页，表盘界面左滑右滑切换表盘。表盘是手表上最重要的界面，如果能有更多功能化的表盘，用户完全可以选择几个常用的表盘作为自己最常用的信息和功能来源，并且用最直接的交互方式进行切换。</p>
+  </li>
+  <li>
+    <p>去掉原本的横向翻阅的快捷卡片，将原本两张快捷设置卡片合并，只保留一个快捷设置界面。将快捷卡片中的常用功能，整合进更多的表盘设计。</p>
+  </li>
+  <li>
+    <p>Android 下拉会把快捷设置和通知中心一期拉出；iOS 下拉通知中心，上划出快捷设置。所以对用户来讲，下拉出通知中心更符合用户的习惯。</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>这个设计看起来跟现在的 Apple Watch OS 没什么区别，我的确是在尝试去分析这个设计的理由。其实在 Ticwear 团队内部，早在 Apple Watch 做出这样的设计之前，确实有过想更快速的切换表盘、去掉快捷卡片、改善四方位交互的想法，但当时没有形成完整的方案，也就没有被提上日程。另一方面， Ticwear 在那一时期，处于产品发布和逐渐稳定的时期，也并不适合做整体结构的较大调整。</p>
+</blockquote>
+
+<h4 id="应用图标设计">应用图标设计</h4>
+
+<p>这是 Ticwear 3.0 的图标设计：</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-old-app-icons.png" /></p>
+<center class="mb-4"> Ticwear 3.0 的应用图标 </center>
+
+<ul>
+  <li>整体的质感和配色，不太符合一款智能手表极客、科技、年轻的风格。</li>
+  <li>图标采用的当时比较流行的长投影。这种设计切入点，特点太过鲜明，也很有时代感，不适合作为系统级别的图标统一大量的出现。</li>
+  <li>所有图标都是圆形也显得相对比较死板，4个圆形成正方形排列，放在圆形表盘里也不是很舒服。</li>
+</ul>
+
+<p>我加入团队后开始重新设计图标。先后尝试了几个版本图标设计。受 Smartisan OS 的影响，再加上我认为表盘的设计方向应该是更精致和拟物化的，所以开始尝试了拟物的风格的图标。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-app-icon-realism.png" /></p>
+<center class="mb-4"> 我设计的一套拟物风格应用图标 </center>
+
+<p>这一版创作的很艰难，完成度还不够。拟物图标更考验一个设计师的绘画能力，这点我还差的太远。每次做拟物图标都让我非常羡慕 Smartisan 设计师们的超能力。</p>
+
+<p>我在设计的过程中发现，拟物的图标跟 Ticwear 系统里其他的界面显得格格不入，跟其对应的每个应用内的设计也很难形成关联。识别度也不够好。</p>
+
+<p>下面是我设计的另一套图标。做主题图标设计，很容易会开始去找一个设计切入点，然后围绕这个点进行发散和创作，像解谜题一样，得到答案会非常开心，但让所有的系统图标都能围绕这个切入点，并且做到贴切，不牵强，还是很难的。而这样的图标还是会出现不好识别的问题，往往那个切入点元素太过鲜明时，会导致他不适合做为系统级的主题出现。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/shots/time_in_circle_2018.png" /></p>
+<center class="mb-4"> 我设计的一套抽象风格应用图标 </center>
+
+<p>经过了多个版本的尝试，Ticwear 4.0 最终采用了下面这套图标。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/shots/ticwatch_appicons.png" /></p>
+<center class="mb-4"> Ticwear 4.0 的应用图标 </center>
+
+<p>这一版更接近主流的设计风格，虽然相对少了一些个性，但是识别度和色彩我还是比较满意的，团队内部也比较接受这套方案。下面是我在整个图标设计过程中获得的一些经验。</p>
+
+<h5 id="智能手表应用图标设计经验">智能手表应用图标设计经验</h5>
+
+<p>对于手机来讲，应用图标是主题设计里很重要的一部分，几乎决定了整个主题的风格。智能手表上的应用图标曝光率虽然没有在手机上那么高，但也一定程度影响系统的整体气质。用户不会盯着手表太久；可能需要更快的处理任务；可能会在运动中使用等等这些特点，决定了手表的应用图标设计应该满足下面的要求：</p>
+<ul>
+  <li>识别度要更好，让用户可以快速的决定和精准点击</li>
+  <li>不要有过小过细的视觉元素出现，太小的元素对整个交互流程是干扰</li>
+</ul>
+
+<p>另外，在设计智能手表应用图标时，可以注意下面几点：</p>
+<ul>
+  <li>可以先考虑几个“表类”的图标：闹钟，秒表，计时器。这几个图标会有些相似，在做设计切入点融入的时候，会比较困难。也一定要分清楚每个都是做什么的。</li>
+  <li>视觉上我倾向于不要用完全相同的形状的图标背景，尝试着让图标接近事物本身的形态。</li>
+  <li>注意图标在实际的环境里的位置和排序。在设计的时候，可能是设计师自己随机的一个位置和排序，而实际图标可能不是在那样的矩阵中排列的，在真实的设备上也一定会有一个出厂时的默认排序。</li>
+</ul>
+
+<h4 id="更多界面设计">更多界面设计</h4>
+
+<h5 id="设置">设置</h5>
+
+<p>下面是 Ticwear 3.0 的设置界面。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-older-setting.png" /></p>
+<center class="mb-4"> Ticwear 3.0 Settings </center>
+
+<p>这个设计的问题比较明显：</p>
+<ul>
+  <li>每个设置项的前面都有一个小图标。所有的设置项目加在一起可能有上百个，设计、维护数量庞大的并且表意不重复的小图标，是非常耗时、收益低的工作。有大量的设置项是无法通过那么小的图标精准表意的，很多小图标已经超出了用图形就能识别意思的初衷，给用户带来很大的困扰。</li>
+  <li>每一级别的设置页面，每一行设置项目之间几乎没有样式上的区别，也会让用户查找起来有些困难。</li>
+</ul>
+
+<p>下面是 Ticwear 4.0 迭代后的设置界面。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-settings.png" /></p>
+<center class="mb-4"> Ticwear 4.0 Settings </center>
+
+<ul>
+  <li>区分了一级列表和次级列表的样式，重新调整了每行的间距</li>
+  <li>去掉了大量的小图标设计，只在第一级菜单有图标。并且重绘了一级项目的图标。</li>
+  <li>优化并规范了控件的样式，并形成了统一的代码库（ <a href="http://ticdesign.chumenwenwen.com/design/"> <strong><em>Ticdesign</em></strong> </a>  ）来规范控件的使用。</li>
+</ul>
+
+<h5 id="快捷设置">快捷设置</h5>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-older-quick-card.png" /></p>
+<center class="mb-4"> Ticwear 3.0 快捷卡片 </center>
+
+<p>Ticwear 3.0 的快捷卡片的最前面是这样两张卡片。团的所有人每天都在使用 Ticwatch，越来越能体会到这两个卡片的带给用户的使用体验实在是毫无“快捷”可言。第一张卡片上的信息，已经更多的被新设计的表盘所取代；第二张卡片，本是应该提供方便的快速开关按钮，却被放在了“快捷卡片”的第二个位置。</p>
+
+<p>在4.0版本里，我们设计了下面的方案。</p>
+
+<p><img class="img-fluid my-4" src="/img/article/watch-ui/watch-ui-quick-card.png" /></p>
+<center class="mb-4"> Ticwear 4.0 快捷卡片 </center>
+
+<p>经过了改版，使用体验有所提升，第一个卡片上就能看到一些快捷开关。但这里依然存在两张卡片，并且在第二张卡片里，有一些“快捷入口”依然是不快捷得，比如这里的“设置”入口，跟从应用列表到达设置需要的步骤是一样的。先向下划，再向左划，去找到第二个卡片上的一些设置项，也不符合常见的快速设置的习惯。我觉得这样的快捷设置界面还是不够完善，在整理自己过去的设计时，重新设计了这个卡片。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-quick-card-redesign.png" /></p>
+<center class="mb-4"> Ticwear 4.0 Quick Card Redesign </center>
+
+<p>在这个Redesign里，主要考虑以下几点</p>
+<ul>
+  <li>去掉了之前的只能作为“入口”的按键，避免了看起来像开关，点了却发现跳转界面的尴尬。</li>
+  <li>去掉了一些并不是很需要经常设置的项目，将快捷设置缩减为一个页面。当然，不排除真的需要更多的开关按钮的可能，我依然保留了翻页，但第二页会是跟第一页是一样的布局。</li>
+  <li>围绕圆形表盘的布局，不会存在之前割裂感比较强的分割线。</li>
+</ul>
+
+<h5 id="应用列表通知中心音乐">应用列表、通知中心、音乐</h5>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-3-system-ui.png" /></p>
+<center class="mb-4"> Ticwear 4.0 Applist / Notification Center / Music </center>
+
+<h5 id="天气">天气</h5>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-weather.png" /></p>
+<center class="mb-4"> Ticwear 4.0 Weather </center>
+
+<h5 id="加载中幻灯片">加载中幻灯片</h5>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-tutorial.png" /></p>
+<center class="mb-4"> Ticwear 4.0 Loading Slides </center>
+
+<h4 id="我对智能手表体验设计的理解">我对智能手表体验设计的理解</h4>
+
+<p>2015年刚加入 Ticwear 项目的时候，我很快的通过各种方式体验了Ticwatch，Apple Watch，和搭载 Android Wear 的智能手表。我把体验后的理解，整理了几页Keynote，在团队内部做了分享。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/watch-ui/watch-ui-old-keynote.png" /></p>
+
+<p>这里面的一些想法，有很多已经在产品上实现。有很多设计上的思考和对智能手表设计的理解，已经总结并发布在 <a href="http://ticdesign.chumenwenwen.com/design/"><strong><em>Ticdesign</em></strong></a> 上。</p>
+
+<p>我想纠正以前的一个错误理解来做为结束。</p>
+
+<blockquote>
+  <p><strong>智能手表不是必需品，不会替代手机，而是跟手机协同互补带给用户更好的体验。</strong></p>
+</blockquote>
+
+<p>智能手表不应该去占用其他设备的使用时间，不应该存在大量、复杂的交互，不应该存在重浏览、重阅读类型的体验。同样是一块屏幕，没什么是手表小屏幕上必须做，而手机的大屏幕上不能做的。如果用户一直盯着手表看，一直在手表上划来划去，不能说产品成功了，你只是把用户引到了一个相对效率低的信息获取载体上。</p>
+
+<blockquote>
+  <p><strong>请用心去设计抬起手腕的每一个瞬间。每个用心设计的瞬间，都是让用户把他戴在手腕上的理由。</strong></p>
+</blockquote>
+
+  </div>
+  <div class="PageNavigation">
+    
+      <a class="next" href="/2018/01/08/about-design/">&laquo; 画图之外，设计之内 </a>
+    
+
+    
+
+  </div>
+</div>
+<div class="d-none col-xl-2 d-xl-block bd-toc">
+  <ul class="section-nav">
+<li class="toc-entry toc-h4"><a href="#从表盘开始">从表盘开始</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#在表盘上展示更多日常信息">在表盘上展示更多日常信息</a></li>
+<li class="toc-entry toc-h5"><a href="#让表盘更精致">让表盘更精致</a></li>
+<li class="toc-entry toc-h5"><a href="#功能化表盘抬刻表盘">功能化表盘：抬刻表盘</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#ticwear-的交互结构">Ticwear 的交互结构</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#redesign">Redesign</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#应用图标设计">应用图标设计</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#智能手表应用图标设计经验">智能手表应用图标设计经验</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#更多界面设计">更多界面设计</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#设置">设置</a></li>
+<li class="toc-entry toc-h5"><a href="#快捷设置">快捷设置</a></li>
+<li class="toc-entry toc-h5"><a href="#应用列表通知中心音乐">应用列表、通知中心、音乐</a></li>
+<li class="toc-entry toc-h5"><a href="#天气">天气</a></li>
+<li class="toc-entry toc-h5"><a href="#加载中幻灯片">加载中幻灯片</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#我对智能手表体验设计的理解">我对智能手表体验设计的理解</a></li>
+</ul>
+</div>
+<div class="col-lg"></div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="icon bookmark shortcut" type="image/png" href="/favicon.ico">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="/css/custom.css" rel="stylesheet" type="text/css">
+  <title> Ticcar In-Vehicle-Inforaiment System UI Design </title>
+</head>
+
+<body class="bg-">
+
+  
+<header class="px-5 bg-primary navbar flex-column flex-md-row bd-navbar">
+
+<a class="navbar-brand my-3 my-md-0 ml-md-4" href="/"><img class="d-block"  src="/img/logo.png" alt=""></a>
+<div class="navbar-nav flex-row pr-md-3">
+  
+    <a class="mx-4 ml-md-5 mr-md-3 nav-link " href="/" >
+      PROJECTS
+    </a>
+  
+    <a class="mx-4 ml-md-5 mr-md-3 nav-link " href="/shots/" >
+      SHOTS
+    </a>
+  
+    <a class="mx-4 ml-md-5 mr-md-3 nav-link " href="/about/" >
+      ABOUT
+    </a>
+  
+</div>
+</header>
+
+
+  <div class="container-fluid" >
+    <div class="row">
+        <!-- content -->
+        <div class="col-lg"></div>
+<div class="col-12 col-lg-9 col-xl-7 col-xxxl-6 py-5 px-5" >
+  <div class="mb-5 article">
+      <h1 class="mb-4">Ticcar In-Vehicle-Inforaiment System UI Design</h1>
+      <h6 class="mb-4">2017 - 2018 @ Volkswagen & Mobvoi</h6>
+      <blockquote>
+  <p>出门问问于2017年4月达成了与大众集团的战略合作，并共同成立了专注车载智能化软件开发的合资子公司问众智能。在新公司的筹备阶段，对车载中控屏软件系统的概念设计就已经开始了。在此后一年多的时间里，设计方案在团队内部积极的讨论中个不断进化。</p>
+</blockquote>
+
+<p>设计过程中的很多讨论都围绕以主页设计为核心的整体的交互结构展开，我在讨论的过程中给出了很多设计方案。我会逐一分析每一个争论点，进而阐述关于车机的设计思路。</p>
+
+<h5 id="智能推送">智能推送</h5>
+
+<p>智能推送的概念在我还在智能手表项目的时候就已经有人提出了。概念本身无论对于手表还是车载，并无差别，都是希望 <strong>通过统计、数据分析的手段，在恰当的时间地点推送给用户他所需要的信息。</strong> 在车载端之所以会很早的提出，是受 android auto 的界面设计启发，我们认为 android auto 的首页就是一种“智能推送的信息流”。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/android-auto.png" /></p>
+<center class="mb-4"> android auto （图片来自 Google 官网)  </center>
+
+<p>下面是我们的第一个以“智能推送信息流”为核心概念的设计，也初步的认为信息流里可以有：来电、未接来电的提示，导航中信息提示，目的地推送，天气等等。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/concept_1.png" /></p>
+<center class="mb-4"> HMI Concept 1  </center>
+
+<p>当时我们的项目处于概念和基础架构的讨论阶段。对“智能推送信息流”应该怎么做、包含一些什么内容、各种边界条件如何处理都没有深入的研究和讨论。团队中也没有人长期深入的体验过 android auto，所以我们也并不知道在真实的环境中 android auto 的“主页卡片”和我们想象中的“智能推送信息流”有什么区别。</p>
+
+<p>而我也对信息流的展现形式产生过怀疑：</p>
+<ul>
+  <li>这是一个看上去需要用户去翻阅浏览的展现形式，几乎等同于手机上的通知中心，但我们的本意并不想让用户时不时的去上下划动浏览它。</li>
+  <li>就算我们最大限度的控制，并且尽可能精准的推送，仍然不能改变他带给用户的压力感，因为信息流的形式看上去很像一个待办任务列表</li>
+</ul>
+
+<h5 id="场景分析">场景分析</h5>
+
+<p>为了判断智能推送的可行性，我们做了一些场景分析。我们按照车辆的 <strong>行驶状态</strong> 和 <strong>导航状态</strong> 将车内场景分成了四个象限。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/scene-analysis.png" /></p>
+<center class="mb-4"> 场景分析 </center>
+
+<p>我们尝试将每个可能的推送类型放在四个象限中去验证它“是否适合在这个场景中推送给用户”，例如：</p>
+<ul>
+  <li><strong>目的地的推送</strong> 不应该出现在导航过程中，因为导航中意味着已经有目的地</li>
+  <li><strong>媒体内容推送</strong> 不适合出现在行驶中，因为专注驾驶的时候不应该受到这类内容的干扰。尤其不能出现在第一象限（行驶中+导航中）。</li>
+  <li><strong>天气信息</strong> 可以在任何的场景中随时更新，但是除非是严重的天气变化会影响接下来的驾驶，否则都不应该打扰用户。</li>
+</ul>
+
+<p>当然，不仅仅是不同类别的智能推送需要这样的场景分析，车机上的所有功能都适合去对应到这四个不同的场景去做不同的设计。</p>
+
+<p>有了这样的分析，我们才对推送有了进一步的理解。最终我们还是决定采用有“智能推送信息流”的方案。我们随后也展开了对不同推送类目的细化设计，希望通过更详细的设计，减少他的负面效应，带来真正的智能体验。</p>
+
+<p>我们在具体设计的时候，对每一类的推送消息，无论智能的还是非智能的，都会考虑下面几个维度：</p>
+<ul>
+  <li>是否适合随时弹出提示（像手机的通知一样随时出来打断用户）适合，什么时候弹出提示？在屏幕上停留多久？不适合，以什么形式推送？</li>
+  <li>是否需要在信息流里长期保存</li>
+  <li>是否更适合在其他终端上推送</li>
+</ul>
+
+<p>必须提到的是，这里所有的推送，有很多是基于用户的地理位置、使用习惯等比较隐私的数据而生成的，这需要我们对用户的隐私有足够的尊重和保护。</p>
+
+<h5 id="语音助手">语音助手</h5>
+
+<p>我在另一个概念设计中，开始尝试解决另一个问题：<strong>语音助手</strong> 一直没能很好的在系统中得到体现，通常它只是以一个按钮的形式出现在主页上。用户通常都不知道该如何使用语音助手。“让用户去阅读帮助文档来学习如何使用”这件事恐怕很难发生在车上。所以在这个概念设计里，我希望将语音助手和智能推送结合，将语音助手说的话，直接显示在屏幕上方，其对应的界面则从信息流中突出出来。并且可以将语音助手的一些日常用法和帮助提示也展示在同样的位置。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/concept_2.png" /></p>
+<center class="mb-4"> HMI Concept 2  </center>
+
+<p>但我渐渐的认识到，语音交互在目前阶段是无法替代常规交互方式的，它还有很多很多的体验问题没有解决。把这样一个更多只是噱头的功能置于这么重要的位置，对用户来讲未必是件好事。当然，人工智能一定要发展下去，但现阶段各大公司所采用的设计都有“拔苗助长”的意味，还是应该理性的对待新技术的落地。所以在我最终的方案里，不会突出语音助手的形象。</p>
+
+<h5 id="地图主页">地图主页</h5>
+
+<p>有很多新的车载软件系统，会把地图做为系统的主页，用户点火后立即就能看到地图，路况，目的地推送，搜索框。在我们概念设计的开始阶段，由于技术条件的限制，是几乎没有考虑这个方案的。但随着讨论的深入，我们发现，导航是车内场景最刚性的需求，用户不一定每次开车都会听东西，但每次开车都会有一个目的地，都有看路况的需要。更快，更方便，更直接的使用导航，是车载软件最应该提供给用户的体验。如果没有更好用更直接的地图主页，车机系统跟一个PAD几乎没有分别。所以我们最终还是确定了地图出现在主页的设计方向。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/concept_3.png" /></p>
+<center class="mb-4"> HMI Concept 3 开始尝试有地图的主页 </center>
+
+<h5 id="全局导航栏">全局导航栏</h5>
+
+<p>在这些概念的设计过程中，我们反复的争论的另一个话题是：全局常驻的导航栏是不是必须存在？</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/concept_4.png" /></p>
+<center class="mb-4"> HMI Concept 4 一个没有全局导航栏、不强调信息流的方案 </center>
+
+<p>导航栏本身的价值在于可以快速的在几个常用应用之间切换。但我们发现，如果有了这样一个导航栏，用户回到主页的概率就会大大的降低。我们希望用户可以在导航和音乐之间快速切换，但我们同时也希望智能推送流就能实现他的大部分需求。</p>
+
+<p>争论双方的立场是：认为要有全局导航栏的认为，全局导航栏不会影响主页的的价值，真正有价值的主页，用户是会使用的；不赞成有导航栏的则认为，如果有全局导航栏，主页就不是用户交互路径的必经之路，用户不用主页的原因就很可能就不是“主页设计的不够好”。</p>
+
+<p>最终我们在智能推送和地图主页两个已经确定的设计前提下，选择用常驻导航栏去补充主页满足不了的需求。</p>
+
+<h5 id="最终方案">最终方案</h5>
+
+<p>基于上述所有的结论，我们最终设计了下面的方案，已经投入开发并可以在实车上演示，但仍有很多细节没有设计完善，比如音乐播放器的交互细节，推送卡片的交互细节等等。</p>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/concept_f.png" /></p>
+<center class="mb-4"> HMI Concept 5 </center>
+
+<h5 id="redesign">Redesign</h5>
+
+<ul>
+  <li>上一个方案里，没有一个全局的搜索栏，用户虽然可以用语音开始导航、播放音乐，但用户一定还是会有需要与屏幕交互来完成这些事情的需要。</li>
+  <li>智能推送的卡片在离驾驶位较远的位置，我不能确定这是不是一个合适的位置，但我认为本身是用来提供方便儿设计的功能，应该出现在更方便的位置。</li>
+  <li>考虑到在未来一段时间内，大屏幕仍然是车机的趋势，我在重新设计时加入了空调控制栏。</li>
+</ul>
+
+<p><img class="img-fluid mt-4 mb-1" src="/img/article/car-ui/ticcar_concept.png" /></p>
+<center class="mb-4"> HMI Redesign </center>
+
+<h4 id="一些学到的东西">一些学到的东西</h4>
+
+<h5 id="车上不适合做重浏览重交互">车上不适合做重浏览、重交互</h5>
+
+<p>无论怎样，车机那块屏幕的位置，都是不太舒服的。我们用到的任何其他需要我们长时间注视和使用的屏幕，都不是那样的角度，也不会用那样的姿势。</p>
+
+<ul>
+  <li>这块屏幕通常会固定在那里，我们必须伸手去与之交互。</li>
+  <li>我们用手机、平板、电脑、电视通常都是正对着屏幕，而车机不是。</li>
+</ul>
+
+<p>所以对于那些需要浏览、需要长时间视线停留、需要复杂交互的应用，如果用户需要，而我们也有条件做，我们也不应该引导用户去那这块屏幕上定机票、订酒店、叫外卖，查餐厅，玩游戏，学英语，记笔记等等，我现在找不出任何把这些东西搬到车上理由。</p>
+
+<h5 id="手机永远都在">手机永远都在</h5>
+
+<p>每当想起一个点子，想要搬到车机上的时候，一定要考虑同样的事情，是不是手机上做会方便的多。</p>
+
+<p>举个侧面的例子：手机解决了一个车上的一个比较大的问题，那就是乘客可以用自己的移动设备和配件满足自己独立的娱乐需求，并且不会干扰司机，这是以前的豪华车都不具备的能力。所以即便车上给副驾驶也配备一块屏幕，他可能需要的更多也是屏幕投射，因为如果你想让他用这个自己不是很熟的系统，那他必须能做到尽量无痛的习惯迁移，甚至比手机有更多好玩的东西。这也说明了，车载的软件的娱乐属性是完全可以被移动设备替代的。</p>
+
+<h5 id="数据流量是个大问题">数据流量是个大问题</h5>
+
+<p>我认识一个不去付费充音频流量的荣威RX5主，他说，他用手机很方便。对啊，我们的手机上已经几乎没有流量焦虑了，如果让用户担心车上的流量问题，肯定是无法接受的。</p>
+
+<h4 id="最后">最后</h4>
+
+<p>在我们设计的过程中，像特斯拉、荣威RX5、蔚来、车和家、拜腾等新时代的联网汽车已经或将要跑在路上了。他们的车内软件系统都是相对整体的用户体验方案，方控，大屏，液晶仪表盘协作交互。而另一方面，科技巨头，Apple 和 Google 也都推出了可以和自己手机系统连通的车载系统解决方案。这两种车载软件系统产品方向都在不断向前发展。</p>
+
+<p>我觉得手机不是车机的竞争对手，手机更像是一个参考标准，如果车机的体验做的比手机差，真的没有理由做下去。车机不是为了打败手机而存在，但任何一个产品都不会想做出来只是个摆设，这可能是车机面对的最无奈的矛盾。如果想让用户用车机系统而不是用架在手机架上的手机，那就必须需要有更简单顺畅交互，更懂用户，更智能。</p>
+
+  </div>
+  <div class="PageNavigation">
+    
+
+    
+      <a class="prev float-right" href="/2018/09/08/project-ticmirror/"> Ticmirror UI Design & Redesign &raquo;</a>
+    
+
+  </div>
+</div>
+<div class="d-none col-xl-2 d-xl-block bd-toc">
+  <ul class="section-nav">
+<li class="toc-entry toc-h5"><a href="#智能推送">智能推送</a></li>
+<li class="toc-entry toc-h5"><a href="#场景分析">场景分析</a></li>
+<li class="toc-entry toc-h5"><a href="#语音助手">语音助手</a></li>
+<li class="toc-entry toc-h5"><a href="#地图主页">地图主页</a></li>
+<li class="toc-entry toc-h5"><a href="#全局导航栏">全局导航栏</a></li>
+<li class="toc-entry toc-h5"><a href="#最终方案">最终方案</a></li>
+<li class="toc-entry toc-h5"><a href="#redesign">Redesign</a></li>
+<li class="toc-entry toc-h4"><a href="#一些学到的东西">一些学到的东西</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#车上不适合做重浏览重交互">车上不适合做重浏览、重交互</a></li>
+<li class="toc-entry toc-h5"><a href="#手机永远都在">手机永远都在</a></li>
+<li class="toc-entry toc-h5"><a href="#数据流量是个大问题">数据流量是个大问题</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#最后">最后</a></li>
+</ul>
+</div>
+<div class="col-lg"></div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    </div>
+  </div>
+</body>
+
+</html>
